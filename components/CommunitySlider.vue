@@ -30,7 +30,10 @@
 </template>
 
 <script>
+import GenericTwoColumn from './GenericTwoColumn.vue'
+
 export default {
+  components: { GenericTwoColumn },
   data() {
     return {
       sliderActiveIndex: 0,

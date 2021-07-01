@@ -19,6 +19,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'GenericTwoColumn',
+}
+</script>
+
 <style scoped lang="scss">
 @import '@/assets/css/fonts';
 

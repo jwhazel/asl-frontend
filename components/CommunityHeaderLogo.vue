@@ -4,6 +4,7 @@
 
 <script>
 export default {
+  name: 'CommunityHeaderLogo',
   data() {
     return {
       logo: '',
