@@ -7,6 +7,7 @@
 
 <script>
 export default {
+  name: 'CommunitHeaderLocation',
   data() {
     return {
       address: '100 Landing Road, Roslyn, New York 11576',

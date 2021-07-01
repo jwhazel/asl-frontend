@@ -14,6 +14,20 @@
   </header>
 </template>
 
+<script>
+import CommunityHeaderNav from './CommunityHeaderNav.vue'
+import CommunityHeaderLogo from './CommunityHeaderLogo.vue'
+import CommunityHeaderLocation from './CommunityHeaderLocation.vue'
+
+export default {
+  components: {
+    CommunityHeaderNav,
+    CommunityHeaderLogo,
+    CommunityHeaderLocation,
+  },
+}
+</script>
+
 <style scoped>
 .container {
   padding: 15px 0;
