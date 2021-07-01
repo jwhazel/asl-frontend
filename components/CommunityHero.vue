@@ -1,0 +1,95 @@
+<template>
+  <div class="container">
+    <div class="row community-hero__container">
+      <div class="col-5 community-hero__content-container">
+        <h1>{{ title }}</h1>
+        <p>{{ subhead }}</p>
+        <p>
+          Starting at <strong>{{ startingAtPrice }}</strong> / month
+        </p>
+        <div><button class="btn">See Pricing and Floorplans</button></div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      title: 'Curabitur estes los este peolse pretium.',
+      subhead:
+        'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit lirm ipsum estes son etes. Ipsum dolor sit amet, conse ctetur adipis.',
+      price: '4000',
+    }
+  },
+  computed: {
+    startingAtPrice() {
+      const formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0,
+      })
+      return formatter.format(this.price)
+    },
+  },
+}
+</script>
+
+<style scoped lang="scss">
+@import '@/assets/css/colors';
+@import '@/assets/css/fonts';
+
+.container {
+  margin-top: 20px;
+}
+
+h1 {
+  font-family: $classico-urw;
+  font-size: 5.3rem;
+  line-height: 55px;
+  font-weight: normal;
+}
+
+p {
+  font-size: 2.4rem;
+  line-height: 36px;
+}
+
+.community-hero__pricing-container {
+  font-size: 2.4rem;
+}
+
+.community-hero__container {
+  height: 670px;
+  background-image: url('~/assets/images/roslyn-harbor-featured.jpg');
+  background-position: right;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.community-hero__content-container {
+  background-color: $brown;
+  color: #fff;
+  padding: 3em 4em;
+  clip-path: polygon(
+    100% 0,
+    96% 24%,
+    92% 50%,
+    86% 76%,
+    78% 100%,
+    32% 100%,
+    0 100%,
+    0% 43%,
+    0 0
+  );
+
+  .btn {
+    color: inherit;
+    margin-top: 10px;
+    padding: 10px 60px;
+  }
+}
+</style>
