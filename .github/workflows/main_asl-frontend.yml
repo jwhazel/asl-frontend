@@ -34,6 +34,6 @@ jobs:
       with:
         app-name: asl-frontend
         slot-name: Production
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6D6AB39C42844882B59461A00A9DF3BD }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_c7944cda250b456b9cb5637b6afc7c71 }}
         package: .
 
