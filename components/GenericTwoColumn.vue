@@ -16,6 +16,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'GenericTwoColumn',
+}
+</script>
+
 <style scoped>
 img {
   border-radius: 16px;
