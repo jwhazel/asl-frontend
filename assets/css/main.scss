@@ -1,0 +1,21 @@
+@import "fonts";
+@import "core-ui";
+
+//Boostrap components required for the Grid
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+
+
+html {
+    font-size: 62.5%;
+    font-family: $brandon-grotesque;
+    color: $brown;
+}
+
+body {
+    margin: 0;
+    font-size: 1.6rem;
+}

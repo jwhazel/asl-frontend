@@ -1,5 +1,9 @@
 <template>
-  <Tutorial/>
+  <div>
+    <CommunityHeader />
+    <CommunityHero />
+    <CommunitySlider />
+  </div>
 </template>
 
 <script>

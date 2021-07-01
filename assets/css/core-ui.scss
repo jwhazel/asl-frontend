@@ -1,0 +1,16 @@
+@import "colors";
+@import "fonts";
+
+.btn {
+    font-family: $brandon-grotesque;
+    background-color: inherit;
+    border: 2px solid $green;
+    font-size: 2.1rem;
+    color: $brown;
+    border-radius: 3px;
+    padding: 10px 27px;
+    transition: background-color 0.3s;
+    &:hover {
+        background-color: $green;
+    }
+}

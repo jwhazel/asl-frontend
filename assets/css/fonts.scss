@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Brandon Grotesque";
+    font-style: normal;
+    font-weight: 400;
+    src: url("~assets/fonts/brandon-grotesque-regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Brandon Grotesque";
+    font-style: normal;
+    font-weight: 600;
+    src: url("~assets/fonts/brandon-grotesque-bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Classico URW";
+    font-style: normal;
+    font-weight: 400;
+    src: url("~assets/fonts/classico-urw-regular.woff2") format("woff2");
+}
+
+$brandon-grotesque: "Brandon Grotesque";
+$classico-urw: "Classico URW";
