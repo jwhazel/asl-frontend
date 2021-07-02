@@ -6,13 +6,14 @@
   </ul>
 </template>
 
+
 <script>
 export default {
   name: 'CommunityHeaderNav',
   data() {
     return {
       navElements: [
-        { label: 'Care', url: '/' },
+        
         { label: 'Apartments', url: '/' },
         { label: 'Amentities', url: '/' },
         { label: 'Events', url: '/' },
