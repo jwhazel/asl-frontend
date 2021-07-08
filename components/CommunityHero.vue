@@ -14,24 +14,18 @@
 </template>
 
 <script>
+import { formatCurrency } from '~/lib/utils'
+
 export default {
-  data() {
-    return {
-      title: 'Curabitur estes los este peolse pretium.',
-      subhead:
-        'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit lirm ipsum estes son etes. Ipsum dolor sit amet, conse ctetur adipis.',
-      price: '4000',
-    }
-  },
   computed: {
     startingAtPrice() {
-      const formatter = new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'USD',
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0,
-      })
-      return formatter.format(this.price)
+      return formatCurrency(this.$store.state.community.price)
+    },
+    title() {
+      return this.$store.state.community.title
+    },
+    subhead() {
+      return this.$store.state.community.subhead
     },
   },
 }
