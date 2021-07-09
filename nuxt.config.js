@@ -39,7 +39,7 @@ export default {
 
   // Config specific for Axios client
   axios: {
-    baseURL: 'http://aslbackend.local/wp-json/wp/v2',
+    baseURL: 'http://147.182.190.4/wp-json/wp/v2',
   },
   apollo: {
     clientConfigs: {
