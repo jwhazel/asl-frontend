@@ -28,6 +28,9 @@ export default {
       return this.$store.state.community.subhead
     },
   },
+  created() {
+    this.$store.dispatch('community/getCommunityData')
+  },
 }
 </script>
 
