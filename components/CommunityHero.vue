@@ -1,9 +1,12 @@
 <template>
   <div class="container">
-    <div class="row community-hero__container">
+    <div
+      class="row community-hero__container"
+      :style="{ 'background-image': 'url(' + background + ')' }"
+    >
       <div class="col-5 community-hero__content-container">
         <h1>{{ title }}</h1>
-        <p>{{ subhead }}</p>
+        <p>{{ text }}</p>
         <p>
           Starting at <strong>{{ startingAtPrice }}</strong> / month
         </p>
@@ -19,13 +22,16 @@ import { formatCurrency } from '~/lib/utils'
 export default {
   computed: {
     startingAtPrice() {
-      return formatCurrency(this.$store.state.community.price)
+      return formatCurrency(this.$store.state.community.CommunityHero.price)
     },
     title() {
-      return this.$store.state.community.title
+      return this.$store.state.community.CommunityHero.title
     },
-    subhead() {
-      return this.$store.state.community.subhead
+    text() {
+      return this.$store.state.community.CommunityHero.text
+    },
+    background() {
+      return this.$store.state.community.CommunityHero.background_image
     },
   },
 }
@@ -57,7 +63,6 @@ p {
 
 .community-hero__container {
   height: 670px;
-  background-image: url('~/assets/images/roslyn-harbor-featured.jpg');
   background-position: right;
   background-repeat: no-repeat;
   border-radius: 16px;
