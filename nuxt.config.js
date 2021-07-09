@@ -32,7 +32,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/apollo'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
@@ -40,5 +40,12 @@ export default {
   // Config specific for Axios client
   axios: {
     baseURL: 'http://aslbackend.local/wp-json/wp/v2',
+  },
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: 'http://aslbackend.local/graphql',
+      },
+    },
   },
 }

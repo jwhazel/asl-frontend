@@ -1,0 +1,27 @@
+query CommunityQuery {
+  community(id: "5", idType: DATABASE_ID) {
+    title
+    slug
+    template {
+      templateName
+    }
+    aslFlexContent {
+      components {
+        __typename
+        ... on Community_Aslflexcontent_Components_CommunityHero {
+          text
+          title
+          fieldGroupName
+        }
+        __typename
+        ... on Community_Aslflexcontent_Components_CommunitySlider {
+          fieldGroupName
+        }
+        __typename
+        ... on Community_Aslflexcontent_Components_CommunityScheduleATour {
+          fieldGroupName
+        }
+      }
+    }
+  }
+}
