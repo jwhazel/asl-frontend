@@ -13,7 +13,6 @@ export const mutations = {
       state[n.acf_fc_layout] = { ...state[n.acf_fc_layout], ...n }
       state.layout.push(n.acf_fc_layout)
     })
-    console.log(state);
   },
 }
 
