@@ -20,7 +20,10 @@
         Care Services
       </li>
     </ul>
-    <div class="community-slider__content-container">
+    <div
+      :class="{ hidden: sliderActiveIndex > 0 }"
+      class="community-slider__content-container"
+    >
       <GenericTwoColumn />
     </div>
   </div>
@@ -107,5 +110,9 @@ export default {
 
 .community-slider__content-container {
   margin-top: 80px;
+}
+
+.hidden {
+  opacity: 0;
 }
 </style>
