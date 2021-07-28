@@ -6,6 +6,10 @@
 # install dependencies
 $ npm install
 
+# make a .env file at the root of your project with:
+BACKEND_USER=whatweusetoseethecoteriepages
+BACKEND_PASSWORD=whatweusetoseethecoteriepages
+
 # serve with hot reload at localhost:3000
 $ npm run dev
 

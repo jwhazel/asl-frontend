@@ -16,8 +16,8 @@ export default {
       return this.$store.state.community.layout
     },
   },
-  created() {
-    this.$store.dispatch('community/getCommunityData')
+  async fetch() {
+    await this.$store.dispatch('community/getCommunityData')
   },
 }
 </script>

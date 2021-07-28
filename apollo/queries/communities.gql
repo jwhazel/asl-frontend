@@ -1,9 +1,0 @@
-query CommunitiesQuery {
-  communities {
-    nodes {
-      id
-      slug
-      title
-    }
-  }
-}

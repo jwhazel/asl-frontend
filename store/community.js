@@ -1,5 +1,3 @@
-// import communityQuery from '~/apollo/queries/community'
-
 export const state = () => ({
   CommunityHero: { title: '', text: '', price: '4000' },
   CommunitySlider: {},
@@ -18,14 +16,20 @@ export const mutations = {
 
 export const actions = {
   async getCommunityData({ state, commit }) {
+    let communityData = null
     try {
-      const communityData = await this.$axios.$get('/communities/5')
-      // const communityData = await this.app.apolloProvider.defaultClient.query({
-      //  query: communityQuery,
-      // })
-      commit('setCommunityData', communityData)
+      communityData = await this.$axios.$get('/communities/100', {
+        credentials: true,
+        auth: {
+          username: this.$config.backendUser,
+          password: this.$config.backendPassword
+        },
+      })
     } catch (err) {
       console.error(err)
+    }
+    if (communityData) {
+      commit('setCommunityData', communityData)
     }
   },
 }

@@ -32,24 +32,21 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/axios', '@nuxtjs/apollo'],
+  modules: ['@nuxtjs/axios'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
   // Config specific for Axios client
   axios: {
-    baseURL: 'http://147.182.190.4/wp-json/wp/v2',
-  },
-  apollo: {
-    clientConfigs: {
-      default: {
-        httpEndpoint: 'http://aslbackend.local/graphql',
-      },
-    },
+    baseURL: 'https://atriaseniorlivingc.temp927.kinsta.cloud/wp-json/wp/v2',
   },
   server: {
     port: 8080, // default: 3000
     host: '0.0.0.0', // default: localhost
+  },
+  privateRuntimeConfig: {
+    backendUser: process.env.BACKEND_USER,
+    backendPassword: process.env.BACKEND_PASSWORD,
   },
 }
